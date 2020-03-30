@@ -1,0 +1,43 @@
+/**index.wxss**/
+
+.page {
+  height: 100vh;
+  display: flex;
+  overflow: hidden;
+}
+
+.out-scroll::-webkit-scrollbar {
+  width: 0;
+  height: 0;
+  color: transparent;
+}
+
+.content {
+  display: flex;
+  flex-direction: row;
+  background: yellow;
+}
+
+.left-scroll {
+  height: 100vh;
+}
+
+.left-scroll>scroll-view {
+  height: 100%;
+}
+
+.right-scroll {
+  flex: 1;
+  background: blue;
+  height: 100vh;
+}
+
+.right-scroll>scroll-view {
+  height: 100%;
+}
+
+::-webkit-scrollbar {
+  width: 0;
+  height: 0;
+  color: transparent;
+}

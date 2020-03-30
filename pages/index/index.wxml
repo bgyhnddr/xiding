@@ -1,0 +1,18 @@
+<!--index.wxml-->
+<view class="page">
+  <scroll-view throttle="{{false}}" scroll-with-animation="{{true}}" scroll-top="{{scrollTop}}" bindscroll="onOutScroll" style="height:100vh" scroll-y="{{outScroll}}" enable-flex="{{true}}">
+    <view style="height:100px;background:green">top</view>
+    <view class='content'>
+      <view class="left-scroll">
+        <scroll-view throttle="{{false}}" scroll-top="{{leftScrollTop}}" scroll-y="{{innerLeft}}" enable-flex="{{true}}" bindscroll="onLeftScroll">
+          <view wx:key="index" wx:for="{{types}}">{{item}}</view>
+        </scroll-view>
+      </view>
+      <view class="right-scroll">
+        <scroll-view throttle="{{false}}" scroll-top="{{rightScrollTop}}" scroll-y="{{innerRight}}" enable-flex="{{true}}" bindscroll="onRightScroll">
+          <view wx:key="index" wx:for="{{items}}">{{item}}</view>
+        </scroll-view>
+      </view>
+    </view>
+  </scroll-view>
+</view>
